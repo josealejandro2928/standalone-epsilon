@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5653e374-4d57-4094-b7dc-2b6e486ef16a" name="Changes" comment="adding runtime config" />
+    <list default="true" id="5653e374-4d57-4094-b7dc-2b6e486ef16a" name="Changes" comment="adding runtime config">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/standalone/epsilon/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/standalone/epsilon/example/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +73,7 @@
       <updated>1673279780991</updated>
       <workItem from="1673279782229" duration="2019000" />
       <workItem from="1673281949341" duration="175000" />
+      <workItem from="1673282915038" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1673281887040</created>
