@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="UAS_Impl_Instance" category="system">
+  <componentInstance name="RFA" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS_Buses.aadl#UAS_Buses.RF_Bus.Impl"/>
+  </componentInstance>
+  <componentInstance name="GND" category="system">
+    <featureInstance name="RFA" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+      <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/2"/>
+    </featureInstance>
+    <featureInstance name="radio_recv" category="eventDataPort">
+      <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedEventDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="radio_send" category="eventDataPort" direction="out">
+      <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedEventDataPort.1"/>
+    </featureInstance>
+    <componentInstance name="BUS_HW" category="bus">
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedBusSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#GS.GS_Bus.Impl"/>
+    </componentInstance>
+    <componentInstance name="RADIO_HW" category="device">
+      <featureInstance name="recv_data_in" category="eventDataPort">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="recv_data_out" category="eventDataPort" direction="out">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+      </featureInstance>
+      <featureInstance name="send_data_in" category="eventDataPort">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+      </featureInstance>
+      <featureInstance name="send_data_out" category="eventDataPort" direction="out">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="GSA" category="busAccess">
+        <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/1"/>
+      </featureInstance>
+      <featureInstance name="RFA" category="busAccess">
+        <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.1"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/2"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDeviceSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:DeviceImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#GS.Radio.Impl"/>
+    </componentInstance>
+    <componentInstance name="MEM_HW" category="memory">
+      <featureInstance name="GSA" category="busAccess">
+        <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#GS.GS_Mem.Impl"/>
+    </componentInstance>
+    <componentInstance name="PROC_SW" category="process">
+      <featureInstance name="recv_data" category="eventDataPort">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.0"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+      </featureInstance>
+      <featureInstance name="send_data" category="eventDataPort" direction="out">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.1"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+      </featureInstance>
+      <componentInstance name="RadioDriver" category="thread">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="./models/raw-models/Phase-2-UAV-Experimental-Platform/CASE/CASE_Properties.aadl#CASE_Properties.Component_Type"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/CASE/CASE_Properties.aadl#/0/@ownedProperty.0/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="recv_data" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+        </featureInstance>
+        <featureInstance name="send_data" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+        </featureInstance>
+        <featureInstance name="AutomationRequest" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/3"/>
+        </featureInstance>
+        <featureInstance name="OperatingRegion" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/4"/>
+        </featureInstance>
+        <featureInstance name="LineSearchTask" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/5"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#GS_SW_Pkg.GSRadioDriver.i"/>
+      </componentInstance>
+      <componentInstance name="SendMessagesServiceGS" category="thread">
+        <featureInstance name="OperatingRegion" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.0"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/4"/>
+        </featureInstance>
+        <featureInstance name="LineSearchTask" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.1"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/5"/>
+        </featureInstance>
+        <featureInstance name="AutomationRequest" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.2"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/3"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedThreadSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ThreadType" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#SendMessagesService_Pkg.SendMessagesServiceGS"/>
+      </componentInstance>
+      <connectionInstance name="SendMessagesServiceGS.OperatingRegion -> RadioDriver.OperatingRegion" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.3" source="//@componentInstance.1/@componentInstance.3/@componentInstance.1/@featureInstance.0">
+        <connectionReference context="//@componentInstance.1/@componentInstance.3" source="//@componentInstance.1/@componentInstance.3/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.3">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="SendMessagesServiceGS.LineSearchTask -> RadioDriver.LineSearchTask" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.4" source="//@componentInstance.1/@componentInstance.3/@componentInstance.1/@featureInstance.1">
+        <connectionReference context="//@componentInstance.1/@componentInstance.3" source="//@componentInstance.1/@componentInstance.3/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.4">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="SendMessagesServiceGS.AutomationRequest -> RadioDriver.AutomationRequest" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.2" source="//@componentInstance.1/@componentInstance.3/@componentInstance.1/@featureInstance.2">
+        <connectionReference context="//@componentInstance.1/@componentInstance.3" source="//@componentInstance.1/@componentInstance.3/@componentInstance.1/@featureInstance.2" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.2">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.4"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedProcessSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#GS_SW_Pkg.GS_SW.Impl"/>
+    </componentInstance>
+    <componentInstance name="PROC_HW" category="processor">
+      <featureInstance name="GSA" category="busAccess">
+        <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedProcessorSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#GS.GS_Proc.Impl"/>
+    </componentInstance>
+    <connectionInstance name="BUS_HW -> RADIO_HW.GSA" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.4" source="//@componentInstance.1/@componentInstance.0">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.4" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="BUS_HW -> PROC_HW.GSA" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.4/@featureInstance.0" source="//@componentInstance.1/@componentInstance.0">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.4/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="BUS_HW -> MEM_HW.GSA" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.2/@featureInstance.0" source="//@componentInstance.1/@componentInstance.0">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.2/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="RADIO_HW.recv_data_out -> PROC_SW.RadioDriver.recv_data" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.0" source="//@componentInstance.1/@componentInstance.1/@featureInstance.1">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.1/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="//@componentInstance.1/@componentInstance.3" source="//@componentInstance.1/@componentInstance.3/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="RADIO_HW.GSA -> BUS_HW" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.0" source="//@componentInstance.1/@componentInstance.1/@featureInstance.4">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.4" destination="//@componentInstance.1/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="MEM_HW.GSA -> BUS_HW" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.0" source="//@componentInstance.1/@componentInstance.2/@featureInstance.0">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="PROC_SW.RadioDriver.send_data -> RADIO_HW.send_data_in" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.2" source="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="//@componentInstance.1/@componentInstance.3" source="//@componentInstance.1/@componentInstance.3/@componentInstance.0/@featureInstance.1" destination="//@componentInstance.1/@componentInstance.3/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS_SW.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.3/@featureInstance.1" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="PROC_HW.GSA -> BUS_HW" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.0" source="//@componentInstance.1/@componentInstance.4/@featureInstance.0">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.4/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#GS.GroundStation.Impl"/>
+  </componentInstance>
+  <componentInstance name="UAV" category="system">
+    <featureInstance name="RFA" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+      <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/2"/>
+    </featureInstance>
+    <featureInstance name="radio_recv" category="eventDataPort">
+      <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="radio_send" category="eventDataPort" direction="out">
+      <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+    </featureInstance>
+    <componentInstance name="FCTL_SBUS" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="./models/raw-models/Phase-2-UAV-Experimental-Platform/CASE/CASE_Properties.aadl#CASE_Properties.Comm_Modality"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/CASE/CASE_Properties.aadl#/0/@ownedProperty.5/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS_Buses.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS_Buses.aadl#UAS_Buses.Serial_Bus.Impl"/>
+    </componentInstance>
+    <componentInstance name="MCMP" category="system">
+      <featureInstance name="FC_UART" category="busAccess">
+        <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedBusAccess.0"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/8"/>
+      </featureInstance>
+      <featureInstance name="RFA" category="busAccess">
+        <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedBusAccess.1"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/2"/>
+      </featureInstance>
+      <featureInstance name="radio_recv" category="eventDataPort">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedEventDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="radio_send" category="eventDataPort" direction="out">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedEventDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="fc_uart_recv" category="eventDataPort">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedEventDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="fc_uart_send" category="eventDataPort" direction="out">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedEventDataPort.3"/>
+      </featureInstance>
+      <componentInstance name="BUS_HW" category="bus">
+        <subcomponent xsi:type="aadl2:BusSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedBusSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:BusImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#MC.MC_Bus.Impl"/>
+      </componentInstance>
+      <componentInstance name="RADIO_HW" category="device">
+        <featureInstance name="recv_data_in" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="recv_data_out" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+        </featureInstance>
+        <featureInstance name="send_data_in" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+        </featureInstance>
+        <featureInstance name="send_data_out" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+        </featureInstance>
+        <featureInstance name="MCA" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/6"/>
+        </featureInstance>
+        <featureInstance name="RFA" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.1"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/2"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#MC.Radio.Impl"/>
+      </componentInstance>
+      <componentInstance name="FC_UART_HW" category="device">
+        <featureInstance name="recv_data_in" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="recv_data_out" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.1"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/7"/>
+        </featureInstance>
+        <featureInstance name="send_data_in" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.2"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/7"/>
+        </featureInstance>
+        <featureInstance name="send_data_out" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.3"/>
+        </featureInstance>
+        <featureInstance name="MCA" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/6"/>
+        </featureInstance>
+        <featureInstance name="UART" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.1"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/8"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#MC.UART.Impl"/>
+      </componentInstance>
+      <componentInstance name="MEM_HW" category="memory">
+        <featureInstance name="MCA" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/6"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:MemorySubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedMemorySubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:MemoryImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#MC.MC_Mem.Impl"/>
+      </componentInstance>
+      <componentInstance name="PROC_SW" category="process">
+        <featureInstance name="uart_recv" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/7"/>
+        </featureInstance>
+        <featureInstance name="uart_send" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/7"/>
+        </featureInstance>
+        <featureInstance name="radio_recv" category="eventDataPort">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+        </featureInstance>
+        <featureInstance name="radio_send" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+        </featureInstance>
+        <componentInstance name="FC_UART" category="thread">
+          <featureInstance name="recv_data" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.0"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/7"/>
+          </featureInstance>
+          <featureInstance name="MissionCommand" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.1"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/9"/>
+          </featureInstance>
+          <featureInstance name="send_data" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.2"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/7"/>
+          </featureInstance>
+          <featureInstance name="AirVehicleState" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.3"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#Drivers.UARTDriver.Impl"/>
+        </componentInstance>
+        <componentInstance name="RADIO" category="thread">
+          <featureInstance name="recv_data" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+          </featureInstance>
+          <featureInstance name="send_data" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/0"/>
+          </featureInstance>
+          <featureInstance name="AutomationResponse" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/11"/>
+          </featureInstance>
+          <featureInstance name="AirVehicleState" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+          </featureInstance>
+          <featureInstance name="AutomationRequest" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/3"/>
+          </featureInstance>
+          <featureInstance name="OperatingRegion" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.5"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/4"/>
+          </featureInstance>
+          <featureInstance name="LineSearchTask" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.6"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/5"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.1"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/Drivers.aadl#Drivers.RadioDriver.Impl"/>
+        </componentInstance>
+        <componentInstance name="UXAS" category="thread group">
+          <featureInstance name="AutomationRequest" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/3"/>
+          </featureInstance>
+          <featureInstance name="AirVehicleState" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+          </featureInstance>
+          <featureInstance name="OperatingRegion" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/4"/>
+          </featureInstance>
+          <featureInstance name="LineSearchTask" category="eventDataPort">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/5"/>
+          </featureInstance>
+          <featureInstance name="MissionCommand" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/9"/>
+          </featureInstance>
+          <featureInstance name="AutomationResponse" category="eventDataPort" direction="out">
+            <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.5"/>
+            <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/11"/>
+          </featureInstance>
+          <componentInstance name="TaskManagerService" category="thread">
+            <featureInstance name="AirVehicleConfiguration" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/12"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleState" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="LineSearchTask" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/5"/>
+            </featureInstance>
+            <featureInstance name="CreateNewService" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/13"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.0"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskManagerService.aadl#TaskManagerService_Pkg.TaskManagerService.i"/>
+          </componentInstance>
+          <componentInstance name="AutomationRequestValidatorService" category="thread">
+            <featureInstance name="AutomationRequest" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/3"/>
+            </featureInstance>
+            <featureInstance name="UniqueAutomationResponse" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/14"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleConfiguration" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/12"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleState" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="OperatingRegion" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/4"/>
+            </featureInstance>
+            <featureInstance name="KeepInZone" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.5"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/15"/>
+            </featureInstance>
+            <featureInstance name="KeepOutZone" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.6"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/16"/>
+            </featureInstance>
+            <featureInstance name="AutomationResponse" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.7"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/11"/>
+            </featureInstance>
+            <featureInstance name="UniqueAutomationRequest" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.8"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/17"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.1"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AutomationRequestValidatorService.aadl#AutomationRequestValidatorService_Pkg.AutomationRequestValidatorService.i"/>
+          </componentInstance>
+          <componentInstance name="RoutePlannerVisibilityService" category="thread">
+            <featureInstance name="KeepOutZone" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/16"/>
+            </featureInstance>
+            <featureInstance name="KeepInZone" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/15"/>
+            </featureInstance>
+            <featureInstance name="OperatingRegion" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/4"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleConfiguration" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/12"/>
+            </featureInstance>
+            <featureInstance name="RoutePlanRequest_task" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/18"/>
+            </featureInstance>
+            <featureInstance name="RoutePlanRequest_ragg" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.5"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/18"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleState" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.6"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="RoutePlanResponse" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.7"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/19"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.2"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RoutePlannerVisibilityService.aadl#RoutePlannerVisibilityService_Pkg.RoutePlannerVisibilityService.i"/>
+          </componentInstance>
+          <componentInstance name="RouteAggregatorService" category="thread">
+            <featureInstance name="AirVehicleState" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleConfiguration" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/12"/>
+            </featureInstance>
+            <featureInstance name="UniqueAutomationResquest" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/17"/>
+            </featureInstance>
+            <featureInstance name="TaskPlanOptions" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/20"/>
+            </featureInstance>
+            <featureInstance name="RoutePlanResponse" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/19"/>
+            </featureInstance>
+            <featureInstance name="RoutePlanRequest" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.5"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/18"/>
+            </featureInstance>
+            <featureInstance name="AssignmentCostMatrix" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.6"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/21"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.3"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/RouteAggregatorService.aadl#RouteAggregatorService_Pkg.RouteAggregatorService.i"/>
+          </componentInstance>
+          <componentInstance name="AssignmentTreeBranchBoundService" category="thread">
+            <featureInstance name="UniqueAutomationRequest" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AssignmentTreeBranchBoundService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/17"/>
+            </featureInstance>
+            <featureInstance name="TaskPlanOptions" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AssignmentTreeBranchBoundService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/20"/>
+            </featureInstance>
+            <featureInstance name="AssignmentCostMatrix" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AssignmentTreeBranchBoundService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/21"/>
+            </featureInstance>
+            <featureInstance name="TaskAssignmentSummary" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AssignmentTreeBranchBoundService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/22"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.4"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/AssignmentTreeBranchBoundService.aadl#AssignmentTreeBranchBoundService_Pkg.AssignmentTreeBranchBoundService.i"/>
+          </componentInstance>
+          <componentInstance name="PlanBuilderService" category="thread">
+            <featureInstance name="AirVehicleState" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/PlanBuilderService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="UniqueAutomationRequest" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/PlanBuilderService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/17"/>
+            </featureInstance>
+            <featureInstance name="TaskAssignmentSummary" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/PlanBuilderService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/22"/>
+            </featureInstance>
+            <featureInstance name="TaskImplementationResponse" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/PlanBuilderService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/23"/>
+            </featureInstance>
+            <featureInstance name="TaskImplementationRequest" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/PlanBuilderService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/24"/>
+            </featureInstance>
+            <featureInstance name="UniqueAutomationResponse" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/PlanBuilderService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.5"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/14"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.5"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/PlanBuilderService.aadl#PlanBuilderService_Pkg.PlanBuilderService.i"/>
+          </componentInstance>
+          <componentInstance name="WaypointPlanManagerService" category="thread">
+            <featureInstance name="AutomationResponse" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/WaypointPlanManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/11"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleState" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/WaypointPlanManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="MissionCommand" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/WaypointPlanManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/9"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.6"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/WaypointPlanManagerService.aadl#WaypointPlanManagerService_Pkg.WaypointPlanManagerService.i"/>
+          </componentInstance>
+          <componentInstance name="CmasiLineSearchTaskService" category="thread">
+            <featureInstance name="AirVehicleState" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="AirVehicleConfiguration" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/12"/>
+            </featureInstance>
+            <featureInstance name="UniqueAutomationRequest" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/17"/>
+            </featureInstance>
+            <featureInstance name="UniqueAutomationResponse" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/14"/>
+            </featureInstance>
+            <featureInstance name="RoutePlanResponse" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.4"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/19"/>
+            </featureInstance>
+            <featureInstance name="TaskImplementationRequest" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.5"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/24"/>
+            </featureInstance>
+            <featureInstance name="RoutePlanRequest" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.6"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/18"/>
+            </featureInstance>
+            <featureInstance name="TaskPlanOptions" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.7"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/20"/>
+            </featureInstance>
+            <featureInstance name="TaskImplementationResponse" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/TaskServiceBase.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.8"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/23"/>
+            </featureInstance>
+            <featureInstance name="CreateNewService" category="eventDataPort">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/CmasiLineSearchTaskService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/13"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.7"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Tasks/CmasiLineSearchTaskService.aadl#CmasiLineSearchTaskService_Pkg.CmasiLineSearchTaskService.i"/>
+          </componentInstance>
+          <componentInstance name="SendMessagesServiceMemory" category="thread">
+            <featureInstance name="AirVehicleConfiguration" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/12"/>
+            </featureInstance>
+            <featureInstance name="KeepInZone" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/15"/>
+            </featureInstance>
+            <featureInstance name="KeepOutZone" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.2"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/16"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.8"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#SendMessagesService_Pkg.SendMessagesServiceMemory.i"/>
+          </componentInstance>
+          <componentInstance name="SendMessagesServiceInit" category="thread">
+            <featureInstance name="AirVehicleState" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/10"/>
+            </featureInstance>
+            <featureInstance name="MissionCommand" category="eventDataPort" direction="out">
+              <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+              <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/9"/>
+            </featureInstance>
+            <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.9"/>
+            <index>0</index>
+            <classifier xsi:type="aadl2:ThreadImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Services/SendMessagesService.aadl#SendMessagesService_Pkg.SendMessagesServiceInit.i"/>
+          </componentInstance>
+          <connectionInstance name="TaskManagerService.CreateNewService -> CmasiLineSearchTaskService.CreateNewService" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.9" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.3">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.9">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.30"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="AutomationRequestValidatorService.AutomationResponse -> WaypointPlanManagerService.AutomationResponse" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.7">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.7" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.0">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.16"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="AutomationRequestValidatorService.UniqueAutomationRequest -> RouteAggregatorService.UniqueAutomationResquest" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.2">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.11"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="AutomationRequestValidatorService.UniqueAutomationRequest -> AssignmentTreeBranchBoundService.UniqueAutomationRequest" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.0">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.12"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="AutomationRequestValidatorService.UniqueAutomationRequest -> PlanBuilderService.UniqueAutomationRequest" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.13"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="AutomationRequestValidatorService.UniqueAutomationRequest -> CmasiLineSearchTaskService.UniqueAutomationRequest" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.8" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.2">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.14"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="RoutePlannerVisibilityService.RoutePlanResponse -> CmasiLineSearchTaskService.RoutePlanResponse" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.7">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.7" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.4">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.27"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="RoutePlannerVisibilityService.RoutePlanResponse -> RouteAggregatorService.RoutePlanResponse" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.7">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.7" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.4">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.28"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="RouteAggregatorService.RoutePlanRequest -> RoutePlannerVisibilityService.RoutePlanRequest_ragg" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.5" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.5">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.5">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.21"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="RouteAggregatorService.AssignmentCostMatrix -> AssignmentTreeBranchBoundService.AssignmentCostMatrix" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.6">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.6" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.2">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.22"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="AssignmentTreeBranchBoundService.TaskAssignmentSummary -> PlanBuilderService.TaskAssignmentSummary" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.3">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.2">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.23"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="PlanBuilderService.TaskImplementationRequest -> CmasiLineSearchTaskService.TaskImplementationRequest" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.5" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.4">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.4" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.5">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.24"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="PlanBuilderService.UniqueAutomationResponse -> AutomationRequestValidatorService.UniqueAutomationResponse" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.5">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.25"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="PlanBuilderService.UniqueAutomationResponse -> CmasiLineSearchTaskService.UniqueAutomationResponse" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.3" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.5">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.3">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.26"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="CmasiLineSearchTaskService.RoutePlanRequest -> RoutePlannerVisibilityService.RoutePlanRequest_task" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.6">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.6" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.4">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.20"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="CmasiLineSearchTaskService.TaskPlanOptions -> RouteAggregatorService.TaskPlanOptions" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.3" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.7">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.7" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.3">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.17"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="CmasiLineSearchTaskService.TaskPlanOptions -> AssignmentTreeBranchBoundService.TaskPlanOptions" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.7">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.7" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.4/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.18"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="CmasiLineSearchTaskService.TaskImplementationResponse -> PlanBuilderService.TaskImplementationResponse" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.3" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.8">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.8" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.3">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.19"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.AirVehicleConfiguration -> RouteAggregatorService.AirVehicleConfiguration" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.31"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.AirVehicleConfiguration -> RoutePlannerVisibilityService.AirVehicleConfiguration" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.3" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.3">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.32"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.AirVehicleConfiguration -> TaskManagerService.AirVehicleConfiguration" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.0">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.33"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.AirVehicleConfiguration -> AutomationRequestValidatorService.AirVehicleConfiguration" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.2">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.34"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.AirVehicleConfiguration -> CmasiLineSearchTaskService.AirVehicleConfiguration" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.35"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.KeepInZone -> AutomationRequestValidatorService.KeepInZone" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.5" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.1">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.5">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.36"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.KeepInZone -> RoutePlannerVisibilityService.KeepInZone" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.1">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.37"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.KeepOutZone -> AutomationRequestValidatorService.KeepOutZone" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.6" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.2">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.6">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.38"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceMemory.KeepOutZone -> RoutePlannerVisibilityService.KeepOutZone" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.2">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.8/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.0">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.39"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceInit.AirVehicleState -> WaypointPlanManagerService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.41"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceInit.AirVehicleState -> RoutePlannerVisibilityService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.6" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.6">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.42"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceInit.AirVehicleState -> PlanBuilderService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.0">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.43"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceInit.AirVehicleState -> TaskManagerService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.1">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.44"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceInit.AirVehicleState -> AutomationRequestValidatorService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.3" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.3">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.45"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceInit.AirVehicleState -> RouteAggregatorService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.0">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.46"/>
+            </connectionReference>
+          </connectionInstance>
+          <connectionInstance name="SendMessagesServiceInit.AirVehicleState -> CmasiLineSearchTaskService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0">
+            <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.0">
+              <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.47"/>
+            </connectionReference>
+          </connectionInstance>
+          <subcomponent xsi:type="aadl2:ThreadGroupSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadGroupSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadGroupImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#Waterways_UxAS.Waterways.i"/>
+        </componentInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> UXAS.WaypointPlanManagerService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> UXAS.RoutePlannerVisibilityService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.6" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.6">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> UXAS.PlanBuilderService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.5/@featureInstance.0">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> UXAS.TaskManagerService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> UXAS.AutomationRequestValidatorService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.3" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.3">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> UXAS.RouteAggregatorService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.3/@featureInstance.0">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> UXAS.CmasiLineSearchTaskService.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.7/@featureInstance.0">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.6"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="FC_UART.AirVehicleState -> RADIO.AirVehicleState" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.3" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.3">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="RADIO.AutomationRequest -> UXAS.AutomationRequestValidatorService.AutomationRequest" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.4">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.4" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.0">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.6"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.0">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.7"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="RADIO.OperatingRegion -> UXAS.AutomationRequestValidatorService.OperatingRegion" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.5">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.2">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.7"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.4">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.9"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="RADIO.OperatingRegion -> UXAS.RoutePlannerVisibilityService.OperatingRegion" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.5">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.2">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.7"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.2/@featureInstance.2">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.10"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="RADIO.LineSearchTask -> UXAS.TaskManagerService.LineSearchTask" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.6">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.6" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.3">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.8"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.0/@featureInstance.2">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.8"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="UXAS.AutomationRequestValidatorService.AutomationResponse -> RADIO.AutomationResponse" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.7">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.1/@featureInstance.7" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.5">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.15"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.2">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.10"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="UXAS.WaypointPlanManagerService.MissionCommand -> FC_UART.MissionCommand" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.2">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.6/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.4">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.29"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.4" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.9"/>
+          </connectionReference>
+        </connectionInstance>
+        <connectionInstance name="UXAS.SendMessagesServiceInit.MissionCommand -> FC_UART.MissionCommand" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.1">
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@componentInstance.9/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.4">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UxAS/Waterways_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.40"/>
+          </connectionReference>
+          <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.2/@featureInstance.4" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.1">
+            <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.9"/>
+          </connectionReference>
+        </connectionInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#SW.SW.Impl"/>
+      </componentInstance>
+      <componentInstance name="PROC_HW" category="processor">
+        <featureInstance name="MCA" category="busAccess">
+          <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+          <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/6"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedProcessorSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessorImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#MC.MC_Proc.Impl"/>
+      </componentInstance>
+      <connectionInstance name="BUS_HW -> RADIO_HW.MCA" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.4" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="BUS_HW -> FC_UART_HW.MCA" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.4" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="BUS_HW -> PROC_HW.MCA" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.5/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.5/@featureInstance.0" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="BUS_HW -> MEM_HW.MCA" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.3/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.3/@featureInstance.0" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="RADIO_HW.recv_data_out -> PROC_SW.RADIO.recv_data" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.1">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.2">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.2"/>
+        </connectionReference>
+        <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="RADIO_HW.MCA -> BUS_HW" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.4">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.4" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="FC_UART_HW.recv_data_out -> PROC_SW.FC_UART.recv_data" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.1">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.4"/>
+        </connectionReference>
+        <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="FC_UART_HW.MCA -> BUS_HW" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.4">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.4" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="MEM_HW.MCA -> BUS_HW" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.3/@featureInstance.0">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.3/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="PROC_SW.FC_UART.send_data -> FC_UART_HW.send_data_in" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.2">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.0/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.1">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+        </connectionReference>
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.2">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.7"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="PROC_SW.RADIO.send_data -> RADIO_HW.send_data_in" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.2" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.1">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1/@componentInstance.4" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.3">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/SW.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+        </connectionReference>
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.4/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.2">
+          <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.6"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="PROC_HW.MCA -> BUS_HW" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.5/@featureInstance.0">
+        <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.5/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#MC.MissionComputer.Impl"/>
+    </componentInstance>
+    <componentInstance name="FCTL" category="system">
+      <featureInstance name="UART" category="busAccess">
+        <feature xsi:type="aadl2:BusAccess" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+        <type href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/instances/UAS_UAS_Impl_Instance.aaxl2#/8"/>
+      </featureInstance>
+      <featureInstance name="uart_recv" category="eventDataPort">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="uart_send" category="eventDataPort" direction="out">
+        <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.1"/>
+      </featureInstance>
+      <componentInstance name="GPS" category="device">
+        <featureInstance name="position" category="eventDataPort" direction="out">
+          <feature xsi:type="aadl2:EventDataPort" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#FC.GPS_Receiver.Impl"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#FC.FlightController.Impl"/>
+    </componentInstance>
+    <connectionInstance name="FCTL_SBUS -> MCMP.FC_UART_HW.UART" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.5" source="//@componentInstance.2/@componentInstance.0">
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+      </connectionReference>
+      <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.5" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="FCTL_SBUS -> FCTL.UART" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.0" source="//@componentInstance.2/@componentInstance.0">
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="MCMP.FC_UART_HW.send_data_out -> FCTL.uart_recv" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.3">
+      <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.5"/>
+      </connectionReference>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="MCMP.FC_UART_HW.UART -> FCTL_SBUS" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.5">
+      <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.5" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.5"/>
+      </connectionReference>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="FCTL.UART -> FCTL_SBUS" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.0" source="//@componentInstance.2/@componentInstance.2/@featureInstance.0">
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="FCTL.GPS.position -> MCMP.FC_UART_HW.recv_data_in" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.0" source="//@componentInstance.2/@componentInstance.2/@componentInstance.0/@featureInstance.0">
+      <connectionReference context="//@componentInstance.2/@componentInstance.2" source="//@componentInstance.2/@componentInstance.2/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.0"/>
+      </connectionReference>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.2/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@featureInstance.4" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#UAV.UAV.Impl"/>
+  </componentInstance>
+  <connectionInstance name="RFA -> GND.RADIO_HW.RFA" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.5" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.5" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="RFA -> UAV.MCMP.RADIO_HW.RFA" complete="true" kind="accessConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.5" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.5" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="GND.RADIO_HW.send_data_out -> UAV.MCMP.RADIO_HW.recv_data_in" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.0" source="//@componentInstance.1/@componentInstance.1/@featureInstance.3">
+    <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.3" destination="//@componentInstance.1/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.2" destination="//@componentInstance.2/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@featureInstance.2" destination="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="GND.RADIO_HW.RFA -> RFA" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.1/@componentInstance.1/@featureInstance.5">
+    <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.5" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.3"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.0" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="UAV.MCMP.RADIO_HW.send_data_out -> GND.RADIO_HW.recv_data_in" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.0" source="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.3">
+    <connectionReference context="//@componentInstance.2/@componentInstance.1" source="//@componentInstance.2/@componentInstance.1/@componentInstance.1/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.3">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.3"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@featureInstance.3" destination="//@componentInstance.2/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.2/@featureInstance.2" destination="//@componentInstance.1/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@featureInstance.1" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <classifier xsi:type="aadl2:SystemImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#UAS.UAS.Impl"/>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="./models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl#UAS.UAS.Impl"/>
+</instance:SystemInstance>

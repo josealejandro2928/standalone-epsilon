@@ -1,0 +1,65 @@
+
+("This is inside of the eol script, model: " + ModelImpl!SystemInstance.all().first().name).println();
+
+var dataOutput = new Map;
+
+getSizeModel();
+getLabelsAndCategories();
+getMetrics();
+// dataOutput.println();
+return dataOutput;
+
+///////////////// OPERATIONS GO HERE //////////////
+operation getSizeModel() {
+	var systemName = ModelImpl!SystemInstance.all().first().name;
+    var components = ModelImpl!ComponentInstance.all().size();
+    var connectors = ModelImpl!ConnectionInstance.all().size();
+    dataOutput.put("systemName",systemName);
+    dataOutput.put("components",components);
+    dataOutput.put("connectors",connectors);
+    dataOutput.put("size",connectors + components);
+}
+
+operation getLabelsAndCategories() {
+    var hardware_components = 0;
+    var hardwareCategorySequence:Sequence = Sequence{"device","memory","bus","processor"};
+    var softwareCategorySequence:Sequence = Sequence{"process","thread","subprogram","threadGroup","subprogramGroup"};
+    var counterHardwareDevices = 0;
+    var counterSoftware = 0;
+    var counterData = 0;
+    var counterSystem = 0;
+
+	for(componentEl in ModelImpl!ComponentInstance.all){
+	    var category = componentEl.category.name;
+
+	    if(hardwareCategorySequence.indexOf(category) > -1){
+	        counterHardwareDevices++;
+	    }
+	    if(softwareCategorySequence.indexOf(category) > -1){
+	        counterSoftware++;
+	    }
+	    if(componentEl.category.name == "data"){
+	        counterData++;
+	    }
+	    if(componentEl.category.name == "system"){
+	        counterSystem++;
+	    }
+	}
+
+	dataOutput.put("no_hardware",counterHardwareDevices);
+    dataOutput.put("no_software",counterSoftware);
+    dataOutput.put("no_data_storage",counterData);
+    dataOutput.put("no_sys",counterSystem);
+}
+
+operation getMetrics(){
+    // Computes **Understandability** //.
+    var n:Real = dataOutput.get("components").asReal();
+    var c:Real = dataOutput.get("connectors").asReal();
+    var udy:Real = 0;
+    if(n > 1){
+        udy = c / (n * (n - 1));
+    }
+    dataOutput.put("udy",udy);
+}
+//////////////////////////////////////////////////
