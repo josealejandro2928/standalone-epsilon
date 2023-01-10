@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5653e374-4d57-4094-b7dc-2b6e486ef16a" name="Changes" comment="adding runtime config" />
+    <list default="true" id="5653e374-4d57-4094-b7dc-2b6e486ef16a" name="Changes" comment="Update Readme">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +75,8 @@
       <workItem from="1673279782229" duration="2019000" />
       <workItem from="1673281949341" duration="175000" />
       <workItem from="1673282915038" duration="56000" />
+      <workItem from="1673283130742" duration="534000" />
+      <workItem from="1673340919430" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1673281887040</created>
@@ -94,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673282944886</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update Readme">
+      <created>1673283648409</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673283648409</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +115,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="adding runtime config" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding runtime config" />
+    <MESSAGE value="Update Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Readme" />
   </component>
 </project>
