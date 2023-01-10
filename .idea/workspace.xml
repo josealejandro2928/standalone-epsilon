@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5653e374-4d57-4094-b7dc-2b6e486ef16a" name="Changes" comment="Update Readme">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5653e374-4d57-4094-b7dc-2b6e486ef16a" name="Changes" comment="Edit the Component Category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecore/aadl2.ecore" beforeDir="false" afterPath="$PROJECT_DIR$/ecore/aadl2.ecore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/eol/main.eol" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/eol/main.eol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +33,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/DATA/00-GSSI/00-WORK/STANDALONE-EPSILON/scripts/eol/example_models&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/mnt/DATA/00-GSSI/00-WORK/STANDALONE-EPSILON/scripts/eol/example_models",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts/eol/example_models" />
@@ -76,7 +78,7 @@
       <workItem from="1673281949341" duration="175000" />
       <workItem from="1673282915038" duration="56000" />
       <workItem from="1673283130742" duration="534000" />
-      <workItem from="1673340919430" duration="63000" />
+      <workItem from="1673340919430" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1673281887040</created>
@@ -106,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673283648409</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update Readme">
+      <created>1673341008175</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673341008175</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Edit the Component Category">
+      <created>1673341155892</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673341155892</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +132,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="adding runtime config" />
     <MESSAGE value="Update Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Readme" />
+    <MESSAGE value="Edit the Component Category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit the Component Category" />
   </component>
 </project>

@@ -23,7 +23,8 @@ operation getSizeModel() {
 operation getLabelsAndCategories() {
     var hardware_components = 0;
     var hardwareCategorySequence:Sequence = Sequence{"device","memory","bus","processor"};
-    var softwareCategorySequence:Sequence = Sequence{"process","thread","subprogram","threadGroup","subprogramGroup"};
+    var softwareCategorySequence:Sequence = Sequence{"process","thread","thread group","threadGroup",
+    "subprogram","subprogram group","subprogramGroup","virtual bus","virtualBus","virtual processor","virtualProcessor"};
     var counterHardwareDevices = 0;
     var counterSoftware = 0;
     var counterData = 0;
@@ -31,7 +32,6 @@ operation getLabelsAndCategories() {
 
 	for(componentEl in ModelImpl!ComponentInstance.all){
 	    var category = componentEl.category.name;
-
 	    if(hardwareCategorySequence.indexOf(category) > -1){
 	        counterHardwareDevices++;
 	    }

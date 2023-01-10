@@ -2044,6 +2044,9 @@
     <eLiterals name="virtualBus" value="12"/>
     <eLiterals name="virtualProcessor" value="13"/>
     <eLiterals name="thread group" value="14"/>
+    <eLiterals name="subprogram group" value="15"/>
+    <eLiterals name="virtual bus" value="16"/>
+    <eLiterals name="virtual processor" value="17"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AnnexLibrary" abstract="true" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
